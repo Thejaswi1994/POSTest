@@ -70,35 +70,3 @@ WebElement Calculatebutton = driver.findElement(By.xpath("//div/a[text()=' Calcu
 }
 	}
 
-/*test case
- Launch browser
- Open URL
- Validate title should be "Your store"
- Close browser
- */
-
-public class firstautoscript {
-	public static void main(String[] args) {
-		
-		//1.Launch browser (chrome)
-		//ChromeDriver driver=new ChromeDriver();
-		WebDriver driver=new ChromeDriver();
-		
-		driver.get("https://www.pos.com.my/send/ratecalculator");
-		
-		//validate the title "Parcel Shipment Rate Calculator | Pos Malaysia
-		
-		String act_title=driver.getTitle();
-		if(act_title.equals("Parcel Shipment Rate Calculator | Pos Malaysia"))
-		{
-			System.out.println("test passed");
-			driver.quit();
-		}
-		else
-		{
-			System.out.println("test failed");
-			driver.quit();
-		}
-
-	}
-	}
